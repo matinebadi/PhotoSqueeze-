@@ -62,33 +62,6 @@ class ImageCompressorApp(App):
                 self.show_error("Error", str(e))
 
     def open_save_popup(self, image, quality):
-        save_popup_content = BoxLayout(orientation='vertical')
-        save_path_input = TextInput(hint_text="Enter save name", size_hint_y=None, height=30)
-        save_popup_content.add_widget(save_path_input)
-        directory_chooser = FileChooserIconView(path=os.path.expanduser("~"))
-        save_popup_content.add_widget(directory_chooser)
-
-        save_button = Button(text="Save Compressed Image", size_hint_y=None, height=50)
-        save_button.bind(on_release=lambda x: self.save_image(image, save_path_input.text, directory_chooser.path, quality))
-        save_popup_content.add_widget(save_button)
-
-        save_popup = Popup(title="Save Compressed Image", content=save_popup_content, size_hint=(0.9, 0.6))
-        save_popup.open()
-
-    def save_image(self, image, filename, directory):
-        if not filename.endswith(".jpg"):
-            filename += ".jpg"
-        if image.mode == 'RGBA':
-            image = image.convert('RGB')
-        save_path = os.path.join(directory, filename)
-        try:
-            image.save(save_path, 'JPEG')
-            self.show_info("Success", f"Image saved successfully at {save_path}")
-        except Exception as e:
-            self.show_error("Error", str(e))
-
-
-        def open_save_popup(self, image, quality):
             save_popup_content = BoxLayout(orientation='vertical')
             save_path_input = TextInput(hint_text="Enter save name", size_hint_y=None, height=30)
             save_popup_content.add_widget(save_path_input)
@@ -101,6 +74,19 @@ class ImageCompressorApp(App):
 
             save_popup = Popup(title="Save Compressed Image", content=save_popup_content, size_hint=(0.9, 0.6))
             save_popup.open()
+
+
+    def save_image(self, image, filename, directory):
+        if not filename.endswith(".jpg"):
+            filename += ".jpg"
+        if image.mode == 'RGBA':
+            image = image.convert('RGB')
+        save_path = os.path.join(directory, filename)
+        try:
+            image.save(save_path, 'JPEG')
+            self.show_info("Success", f"Image saved successfully at {save_path}")
+        except Exception as e:
+            self.show_error("Error", str(e))
 
     def save_image(self, image, filename, directory, quality):
         if not filename.endswith(".jpg"):
