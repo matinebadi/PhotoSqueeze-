@@ -89,13 +89,11 @@ class ImageCompressorApp(App):
             self.show_error("Error", str(e))
 
     def save_image(self, image, filename, directory, quality):
-        if not filename.endswith(".jpg"):
-            filename += ".jpg"
+        if not filename.endswith(".PNG"):
+            filename += ".PNG"
         save_path = os.path.join(directory, filename)
-
-
         try:
-            image.save(save_path, 'JPEG', quality=quality)
+            image.save(save_path, 'PNG', quality=quality)
             self.show_success("Success", f"Image saved to {save_path}")
         except Exception as e:
             self.show_error("Error", str(e))
