@@ -1,59 +1,55 @@
-# 🚀 **Image Compressor App** – Compress Your Images with Style! 🚀
+# Image Compressor App
 
-Welcome to the **Image Compressor App**, a sleek and efficient tool to **compress your images** without compromising on quality. This app is built with **Kivy** and **Pillow**, offering a **user-friendly interface** and a **seamless experience** for image compression. 🎨
+This is a simple image compressor application built using the Kivy framework for the graphical user interface (GUI) and PIL (Python Imaging Library) for image processing. The app allows users to compress images while keeping their original dimensions. Users can select the desired compression quality using a slider and choose where to save the compressed image.
 
-## ✨ **Features** ✨
+## Features
 
-- **Easy Upload**: Click to upload and compress images with just a few clicks!
-- **Adjustable Quality**: Use the **slider** to select the perfect compression quality, from **1% to 100%**.
-- **Save in PNG**: The app saves images in **high-quality PNG** format.
-- **User-Friendly Interface**: Clean, minimal, and easy-to-use design powered by **Kivy**.
-- **Helpful Error Messages**: Get clear, friendly feedback if something goes wrong.
+- **Upload Image**: Allows the user to upload an image from their computer.
+- **Set Compression Quality**: Use a slider to set the compression quality of the image.
+- **Save Image**: After compressing the image, users can choose where to save the compressed file.
+- **Supports JPEG and PNG Formats**: You can save the compressed image in JPEG or PNG format.
 
----
+## Requirements
 
-## ⚡ **Installation** ⚡
+To run this app, you need the following Python packages:
 
-To get started with the **Image Compressor App**, follow these steps:
+- **Kivy**: A Python framework for building GUI applications.
+- **Pillow (PIL)**: A Python Imaging Library to handle image processing.
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/ImageCompressorApp.git
-   cd ImageCompressorApp
-Install dependencies: Ensure that you have the necessary libraries:
+To install the required packages, use:
 
-bash
-Copy
-Edit
+```bash
 pip install kivy pillow
-Run the app: After installing the dependencies, you can start the app by running:
+```
 
-bash
-Copy
-Edit
-python main.py
-🎬 How to Use 🎬
-Launch the App: Open the app and enjoy the simple, clean interface.
+## How to Run
 
-Upload Your Image: Click the "Upload Image" button and choose the image you want to compress.
+1. Clone this repository or download the Python script.
+2. Ensure you have the required dependencies installed (as mentioned above).
+3. Run the Python script:
 
-Adjust Compression Quality: Use the slider to set your desired compression percentage (from 1% to 100%).
+```bash
+python image_compressor.py
+```
 
-Save Your Compressed Image: After compression, name your file and choose the save location.
+## Usage
 
-🛠 How It Works 🛠
-Select Your Image: Upload your image using the file chooser.
+1. **Select Image**: Click on the "Upload Image" button to choose an image from your computer.
+2. **Adjust Compression Quality**: Use the slider to select the desired quality (from 1% to 100%).
+3. **Save Image**: Once the image is uploaded and the compression quality is selected, click the "Save Compressed Image" button to save the image in the desired location.
 
-Set the Compression Level: Adjust the quality slider.
+## Code Overview
 
-Save the Image: Choose the folder and save your compressed image in PNG format.
+- **ImageCompressorApp**: The main class that creates the GUI using Kivy.
+  - `build`: Sets up the layout and components of the app.
+  - `on_slider_value_change`: Updates the slider label to show the selected compression quality.
+  - `show_filechooser`: Opens the file chooser dialog to select an image.
+  - `compress_image`: Compresses the selected image based on the selected quality.
+  - `open_save_popup`: Prompts the user to enter the save name and select the save location.
+  - `save_image`: Saves the compressed image in either PNG or JPEG format.
 
-📸 Screenshots 📸
-(Add your screenshots here to give a visual overview of the app in action!)
+## License
 
-📜 License 📜
-This project is licensed under the MIT License. You can find the full license here.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-💬 Get in Touch! 💬
-Have questions or feedback? Open an issue or reach out via GitHub. I’d love to hear from you! 💥
 
