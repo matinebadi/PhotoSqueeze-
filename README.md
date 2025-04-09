@@ -1,27 +1,25 @@
-🚀 Image Compressor App – Compress Your Images with Style! 🚀
-Welcome to the Image Compressor App, a sleek and efficient tool to compress your images without compromising on quality. This app is built with Kivy and Pillow, offering a user-friendly interface and a seamless experience for image compression. 🎨
+# 🚀 **Image Compressor App** – Compress Your Images with Style! 🚀
 
-✨ Features ✨
-Easy Upload: Click to upload and compress images with just a few clicks!
+Welcome to the **Image Compressor App**, a sleek and efficient tool to **compress your images** without compromising on quality. This app is built with **Kivy** and **Pillow**, offering a **user-friendly interface** and a **seamless experience** for image compression. 🎨
 
-Adjustable Quality: Use the slider to select the perfect compression quality, from 1% to 100%.
+## ✨ **Features** ✨
 
-Save in PNG: The app saves images in high-quality PNG format.
+- **Easy Upload**: Click to upload and compress images with just a few clicks!
+- **Adjustable Quality**: Use the **slider** to select the perfect compression quality, from **1% to 100%**.
+- **Save in PNG**: The app saves images in **high-quality PNG** format.
+- **User-Friendly Interface**: Clean, minimal, and easy-to-use design powered by **Kivy**.
+- **Helpful Error Messages**: Get clear, friendly feedback if something goes wrong.
 
-User-Friendly Interface: Clean, minimal, and easy-to-use design powered by Kivy.
+---
 
-Helpful Error Messages: Get clear, friendly feedback if something goes wrong.
+## ⚡ **Installation** ⚡
 
-⚡ Installation ⚡
-To get started with the Image Compressor App, follow these steps:
+To get started with the **Image Compressor App**, follow these steps:
 
-Clone the repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/ImageCompressorApp.git
-cd ImageCompressorApp
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/ImageCompressorApp.git
+   cd ImageCompressorApp
 Install dependencies: Ensure that you have the necessary libraries:
 
 bash
@@ -58,3 +56,4 @@ This project is licensed under the MIT License. You can find the full license he
 
 💬 Get in Touch! 💬
 Have questions or feedback? Open an issue or reach out via GitHub. I’d love to hear from you! 💥
+
